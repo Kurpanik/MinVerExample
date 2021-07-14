@@ -1,0 +1,28 @@
+# MinVer example
+
+Example for how to build DotNet packages with Github Actions using MinVer and publish to nuget.org
+
+## Features
+
+- Build with Github Actions
+- Build Release packages from main branch
+- Build Pre-Release packages from develop branch (or any other you require for your Git Flow)
+- Automatic versioning with SemVer 2.0 and [MinVer](https://github.com/adamralph/minver), based on Git Tags and "Git height"
+- [SourceLink](https://github.com/dotnet/sourcelink) activated, pushing Symbols for Debug
+
+## Nuget Package Metadata
+
+- License
+- Icon
+- Github README.md Markdown displayed on nuget.org
+
+Consider including the following items in your README:
+
+- An introduction to what your package is and does – what problems does it solve?
+- How to get started with your package – are there any specific requirements?
+- Links to more comprehensive documentation if not included in the README itself.
+- At least a few code snippets/samples or example images.
+- Where and how to leave feedback such as link to the project issues, Twitter, bug tracker, or other platform.
+- How to contribute, if applicable.
+
+[See more about README.md for Nuget packages here](https://devblogs.microsoft.com/nuget/add-a-readme-to-your-nuget-package/)
