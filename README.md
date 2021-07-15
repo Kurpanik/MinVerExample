@@ -2,7 +2,7 @@
 
 Example for how to build DotNet packages with Github Actions using MinVer and publish to nuget.org
 
-[![OnPublishedRelease](https://github.com/Kurpanik/MinVerExample/actions/workflows/OnPublishedRelease.yml/badge.svg)](https://github.com/Kurpanik/MinVerExample/actions/workflows/OnPublishedRelease.yml)  [![OnPush develop](https://github.com/Kurpanik/MinVerExample/actions/workflows/OnPushDevelop.yml/badge.svg)](https://github.com/Kurpanik/MinVerExample/actions/workflows/OnPushDevelop.yml)  [![NuGet Status](https://img.shields.io/nuget/v/MinVer.Example.svg)](https://www.nuget.org/packages/MinVer.Example/)
+[![OnPublishedRelease](https://github.com/Kurpanik/MinVerExample/actions/workflows/OnPublishedRelease.yml/badge.svg)](https://github.com/Kurpanik/MinVerExample/actions/workflows/OnPublishedRelease.yml)  [![OnPush develop](https://github.com/Kurpanik/MinVerExample/actions/workflows/OnPushDevelop.yml/badge.svg)](https://github.com/Kurpanik/MinVerExample/actions/workflows/OnPushDevelop.yml)  [![NuGet Status](https://img.shields.io/nuget/v/MinVer.Example.svg)](https://www.nuget.org/packages/MinVer.Example/)  [![MinVer.Example on fuget.org](https://www.fuget.org/packages/MinVer.Example/badge.svg)](https://www.fuget.org/packages/MinVer.Example)
 
 ## Features
 
