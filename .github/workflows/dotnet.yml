@@ -21,11 +21,11 @@ jobs:
     - name: publish on nuget.org
       id: publish_nuget
       uses: rohith/publish-nuget@v2
-        with:
-          PROJECT_FILE_PATH: src/MinVer.Example/MinVer.Example.csproj
-          PACKAGE_NAME: MinVer.Example
-          VERSION_STATIC: 1.0.0          
-          TAG_COMMIT: false
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-          NUGET_SOURCE: https://api.nuget.org
-          INCLUDE_SYMBOLS: false
+      with:
+        PROJECT_FILE_PATH: src/MinVer.Example/MinVer.Example.csproj
+        PACKAGE_NAME: MinVer.Example
+        VERSION_STATIC: 1.0.0          
+        TAG_COMMIT: false
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+        NUGET_SOURCE: https://api.nuget.org
+        INCLUDE_SYMBOLS: false
