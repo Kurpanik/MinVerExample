@@ -1,26 +1,30 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
-        <PackageId>MinVer.Example</PackageId>
-        <Authors>Alex Kurpanik</Authors>
-        <Description>Example for how to build DotNet packages with Github Actions using MinVer and publish to nuget.org</Description>
+        <Description>Example of a Howto build DotNet packages using MinVer, Github Actions and nuget.org</Description>
         <Copyright>Copyright (c) Alex Kurpanik 2021</Copyright>
-        <PackageTags>minver nuget github example</PackageTags>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <RepositoryUrl>https://github.com/Kurpanik/MinVerExample</RepositoryUrl>
-        <PackageProjectUrl>https://github.com/Kurpanik/MinVerExample</PackageProjectUrl>
+        <Authors>Alex Kurpanik</Authors>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageReleaseNotes>See https://github.com/Kurpanik/MinVerExample/releases</PackageReleaseNotes>
+        <PackageId>MinVer.Example</PackageId>
+        <PackageTags>minver nuget github</PackageTags>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/Kurpanik/MinVerExample</PackageProjectUrl>
+        <PackageReleaseNotes>https://github.com/Kurpanik/MinVerExample/releases</PackageReleaseNotes>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <DebugSymbols>true</DebugSymbols>
         <DebugType>portable</DebugType>
-        <IncludeSymbols>true</IncludeSymbols>
-        <IncludeSource>true</IncludeSource>
-        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <AllowedOutputExtensionsInPackageBuildOutputFolder>.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources><!--Important for SourceLink-->
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild><!--Deterministic builds-->
         <PackageIcon>icon.png</PackageIcon>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <EmbedAllSources>true</EmbedAllSources><!--Embed compressed sources to PDB, not mandatory with SourceLink-->
+        <!--<IncludeSymbols>true</IncludeSymbols>--><!--Build symbols package-->
+        <!--<IncludeSource>true</IncludeSource>--><!--Embed source to symbols package. Not working for snupkg-->
+
+        <PackageReadmeFile>README.md</PackageReadmeFile><!--Remove if using snupkg-->
+        <!--<SymbolPackageFormat>snupkg</SymbolPackageFormat>--><!--Symbol package type-->
+        
+        <AllowedOutputExtensionsInPackageBuildOutputFolder>.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+        <!--AllowedOutputExtensionsInPackageBuildOutputFolder => Embed PDBs also in nuget package-->
     </PropertyGroup>
 
     <ItemGroup>

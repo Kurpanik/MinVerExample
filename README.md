@@ -5,16 +5,16 @@ Example for how to build DotNet packages with Github Actions using MinVer and pu
 ## Features
 
 - Build with Github Actions
-- Build Release packages from main branch
+- Build Release packages from main/master branch
 - Build Pre-Release packages from develop branch (or any other you require for your Git Flow)
 - Automatic versioning with SemVer 2.0 and [MinVer](https://github.com/adamralph/minver), based on Git Tags and "Git height"
-- [SourceLink](https://github.com/dotnet/sourcelink) activated, pushing Symbols for Debug
+- Including [SourceLink](https://github.com/dotnet/sourcelink)
 
 ## Nuget Package Metadata
 
-- License
-- Icon
-- Github README.md Markdown displayed on nuget.org
+- See [MSDN: Package authoring best practices](https://tinyurl.com/syhtn6u6)
+
+## Readme.md
 
 Consider including the following items in your README:
 
@@ -26,3 +26,8 @@ Consider including the following items in your README:
 - How to contribute, if applicable.
 
 [See more about README.md for Nuget packages here](https://devblogs.microsoft.com/nuget/add-a-readme-to-your-nuget-package/)
+
+## SourceLink
+
+- See [MSDN](https://docs.microsoft.com/en-us/dotnet/standard/library-guidance/sourcelink)
+- See [Github](https://github.com/dotnet/sourcelink#using-source-link-in-net-projects)
