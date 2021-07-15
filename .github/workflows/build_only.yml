@@ -1,6 +1,8 @@
-name: Build only
+name: OnPush develop
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - develop
 
 jobs:
   build:
@@ -19,3 +21,14 @@ jobs:
       run: dotnet build --no-restore --configuration Release ./src/MinVer.Example/MinVer.Example.csproj
     - name: Test
       run: dotnet test --no-build --verbosity normal ./src/MinVer.Example/MinVer.Example.csproj
+    - name: publish on nuget.org
+      id: publish_nuget
+      uses: rohith/publish-nuget@v2
+      with:
+        PROJECT_FILE_PATH: src/MinVer.Example/MinVer.Example.csproj
+        PACKAGE_NAME: MinVer.Example
+        VERSION_STATIC: 1.0.0          
+        TAG_COMMIT: false
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+        NUGET_SOURCE: https://api.nuget.org
+        INCLUDE_SYMBOLS: false
