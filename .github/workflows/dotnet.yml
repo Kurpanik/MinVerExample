@@ -13,11 +13,11 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./src/MinVer.Example/MinVer.Example.csproj
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore ./src/MinVer.Example/MinVer.Example.csproj
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal ./src/MinVer.Example/MinVer.Example.csproj
     - name: publish on nuget.org
       id: publish_nuget
       uses: rohith/publish-nuget@v2
