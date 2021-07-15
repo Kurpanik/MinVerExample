@@ -15,7 +15,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./src/MinVer.Example/MinVer.Example.csproj
     - name: Build
-      run: dotnet build --no-restore ./src/MinVer.Example/MinVer.Example.csproj
+      run: dotnet build --no-restore --configuration Release ./src/MinVer.Example/MinVer.Example.csproj
     - name: Test
       run: dotnet test --no-build --verbosity normal ./src/MinVer.Example/MinVer.Example.csproj
     - name: publish on nuget.org
