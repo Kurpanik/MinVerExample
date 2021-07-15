@@ -7,12 +7,17 @@ Example for how to build DotNet packages with Github Actions using MinVer and pu
 ## Features
 
 - Build with Github Actions
-- Build Release packages from main/master branch
-- Build Pre-Release packages from develop branch (or any other you require for your Git Flow)
+- Build Release packages from main/master on every new tagged Github Release
+- Build Pre-Release packages from develop branch an every push (code in feature branches only)
 - Automatic versioning with SemVer 2.0 and [MinVer](https://github.com/adamralph/minver), based on Git Tags and "Git height"
-- Including [SourceLink](https://github.com/dotnet/sourcelink)
+- Including NuGet...
+  - Complete metadata
+  - [SourceLink](https://github.com/dotnet/sourcelink) configured (link to source/commit for every package)
+  - embedded portable PDBs & compressed source (or snupkg symbols if required, just uncomment)
+  - Github README.md (this file) used also for listing on nuget.org
+  - Icon for NuGet package
 
-## Nuget Package Metadata
+## NuGet Package Metadata
 
 - See [MSDN: Package authoring best practices](https://tinyurl.com/syhtn6u6)
 
@@ -27,9 +32,9 @@ Consider including the following items in your README:
 - Where and how to leave feedback such as link to the project issues, Twitter, bug tracker, or other platform.
 - How to contribute, if applicable.
 
-[See more about README.md for Nuget packages here](https://devblogs.microsoft.com/nuget/add-a-readme-to-your-nuget-package/)
+[See more about README.md and embedding in your package here](https://devblogs.microsoft.com/nuget/add-a-readme-to-your-nuget-package/)
 
 ## SourceLink
 
-- See [MSDN](https://docs.microsoft.com/en-us/dotnet/standard/library-guidance/sourcelink)
-- See [Github](https://github.com/dotnet/sourcelink#using-source-link-in-net-projects)
+- [MSDN Guidance](https://docs.microsoft.com/en-us/dotnet/standard/library-guidance/sourcelink)
+- [Github Project](https://github.com/dotnet/sourcelink#using-source-link-in-net-projects)
