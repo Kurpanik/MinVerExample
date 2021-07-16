@@ -13,6 +13,8 @@
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <DebugSymbols>true</DebugSymbols>
         <DebugType>portable</DebugType>
+        <!--Embed PDBs instead of prtable, AllowedOutputExtensionsInPackageBuildOutputFolder can be skipped then: -->
+        <!--<DebugType>embedded</DebugType>-->
         <EmbedUntrackedSources>true</EmbedUntrackedSources><!--Important for SourceLink-->
         <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild><!--Deterministic builds-->
         <PackageIcon>icon.png</PackageIcon>
@@ -22,9 +24,9 @@
 
         <PackageReadmeFile>README.md</PackageReadmeFile><!--Remove if using snupkg-->
         <!--<SymbolPackageFormat>snupkg</SymbolPackageFormat>--><!--Symbol package type-->
-        
-        <AllowedOutputExtensionsInPackageBuildOutputFolder>.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-        <!--AllowedOutputExtensionsInPackageBuildOutputFolder => Embed PDBs also in nuget package-->
+
+        <!--AllowedOutputExtensionsInPackageBuildOutputFolder => Embed PDBs also in nuget package: -->
+        <AllowedOutputExtensionsInPackageBuildOutputFolder>.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>        
     </PropertyGroup>
 
     <ItemGroup>
