@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
         <Description>Example of a Howto build DotNet packages using MinVer, Github Actions and nuget.org</Description>
-        <Copyright>Copyright (c) Alex Kurpanik 2021</Copyright>
+        <Copyright>Copyright (c) Alex Kurpanik 2023</Copyright>
         <Authors>Alex Kurpanik</Authors>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>MinVer.Example</PackageId>
@@ -30,8 +30,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="MinVer" PrivateAssets="all" Version="2.5.0" />
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+        <PackageReference Include="MinVer" PrivateAssets="all" Version="4.3.0" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
     </ItemGroup>
 
     <ItemGroup>
